@@ -1,5 +1,5 @@
 export class Comment {
-  constructor (
+  constructor(
     public comment: string,
   ) {
     this.comment = comment || '';
@@ -7,7 +7,7 @@ export class Comment {
 }
 
 export class Note {
-  constructor (
+  constructor(
     public text: string,
     public of: string = '',
   ) {
@@ -17,7 +17,7 @@ export class Note {
 }
 
 export class Component {
-  constructor (
+  constructor(
     public name: string,
     public title: string,
   ) {
@@ -25,7 +25,7 @@ export class Component {
 }
 
 export class UseCase {
-  constructor (
+  constructor(
     public name: string,
     public title: string,
   ) {
@@ -34,7 +34,7 @@ export class UseCase {
 
 export type Accessor = ('-' | '#' | '~' | '+')
 export class Method {
-  constructor (
+  constructor(
     public name: string,
     public isStatic: boolean,
     public accessor: Accessor,
@@ -49,7 +49,7 @@ export class Method {
 }
 
 export class MemberVariable {
-  constructor (
+  constructor(
     public name: string,
     public isStatic: boolean,
     public accessor: Accessor,
@@ -63,7 +63,7 @@ export class MemberVariable {
 
 export type Member = (Method | MemberVariable)
 export class Enum {
-  constructor (
+  constructor(
     public name: string,
     public title: string,
     public members: Member[] = [],
@@ -77,7 +77,7 @@ export class Enum {
 }
 
 export class Interface {
-  constructor (
+  constructor(
     public name: string,
     public title: string,
     public members: Member[] = [],
@@ -91,7 +91,7 @@ export class Interface {
 }
 
 export class Class {
-  constructor (
+  constructor(
     public name: string,
     public title: string,
     public isAbstract: boolean,
@@ -106,9 +106,74 @@ export class Class {
   }
 }
 
+
+
+export class Actor {
+  constructor(
+    public name: string,
+    public title: string,
+    public type: string,
+  ) {
+    this.type = 'Actor'
+  }
+}
+
+export class Boundary {
+  constructor(
+    public name: string,
+    public title: string,
+    public type: string,
+  ) {
+    this.type = 'Boundary'
+  }
+}
+
+export class Control {
+  constructor(
+    public name: string,
+    public title: string,
+    public type: string,
+  ) {
+    this.type = 'Control'
+  }
+}
+
+export class Entity {
+  constructor(
+    public name: string,
+    public title: string,
+    public type: string,
+  ) {
+    this.type = 'Entity'
+  }
+}
+
+
+export class Database {
+  constructor(
+    public name: string,
+    public title: string,
+    public type: string,
+  ) {
+    this.type = 'Database'
+  }
+}
+
+
+
+export class Collections {
+  constructor(
+    public name: string,
+    public title: string,
+    public type: string,
+  ) {
+    this.type = 'Collections'
+  }
+}
+
 export type GroupType = ('package' | 'node' | 'folder' | 'frame' | 'cloud' | 'database')
 export class Group {
-  constructor (
+  constructor(
     public name: string,
     public title: string,
     public type: GroupType,
@@ -140,7 +205,7 @@ export type RelationshipArrowBody = (
   | '.'
 );
 export class Relationship {
-  constructor (
+  constructor(
     public left: string,
     public right: string,
     public leftType: string,
@@ -178,13 +243,13 @@ export type UMLElement = (
   | Relationship
 );
 export class UML {
-  constructor (
+  constructor(
     public elements: UMLElement[],
   ) { }
 }
 
 export class File {
-  constructor (
+  constructor(
     public name: string,
     public diagrams: UML[],
   ) {

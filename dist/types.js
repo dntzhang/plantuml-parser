@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.File = exports.UML = exports.Relationship = exports.Group = exports.Class = exports.Interface = exports.Enum = exports.MemberVariable = exports.Method = exports.UseCase = exports.Component = exports.Note = exports.Comment = void 0;
+exports.File = exports.UML = exports.Relationship = exports.Group = exports.Collections = exports.Database = exports.Entity = exports.Control = exports.Boundary = exports.Actor = exports.Class = exports.Interface = exports.Enum = exports.MemberVariable = exports.Method = exports.UseCase = exports.Component = exports.Note = exports.Comment = void 0;
 var Comment = /** @class */ (function () {
     function Comment(comment) {
         this.comment = comment;
@@ -118,6 +118,66 @@ var Class = /** @class */ (function () {
     return Class;
 }());
 exports.Class = Class;
+var Actor = /** @class */ (function () {
+    function Actor(name, title, type) {
+        this.name = name;
+        this.title = title;
+        this.type = type;
+        this.type = 'Actor';
+    }
+    return Actor;
+}());
+exports.Actor = Actor;
+var Boundary = /** @class */ (function () {
+    function Boundary(name, title, type) {
+        this.name = name;
+        this.title = title;
+        this.type = type;
+        this.type = 'Boundary';
+    }
+    return Boundary;
+}());
+exports.Boundary = Boundary;
+var Control = /** @class */ (function () {
+    function Control(name, title, type) {
+        this.name = name;
+        this.title = title;
+        this.type = type;
+        this.type = 'Control';
+    }
+    return Control;
+}());
+exports.Control = Control;
+var Entity = /** @class */ (function () {
+    function Entity(name, title, type) {
+        this.name = name;
+        this.title = title;
+        this.type = type;
+        this.type = 'Entity';
+    }
+    return Entity;
+}());
+exports.Entity = Entity;
+var Database = /** @class */ (function () {
+    function Database(name, title, type) {
+        this.name = name;
+        this.title = title;
+        this.type = type;
+        this.type = 'Database';
+    }
+    return Database;
+}());
+exports.Database = Database;
+var Collections = /** @class */ (function () {
+    function Collections(name, title, type) {
+        this.name = name;
+        this.title = title;
+        this.type = type;
+        this.type = 'Collections';
+    }
+    return Collections;
+}());
+exports.Collections = Collections;
 var Group = /** @class */ (function () {
     function Group(name, title, type, elements) {
         this.name = name;

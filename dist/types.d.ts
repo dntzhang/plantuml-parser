@@ -59,6 +59,42 @@ export declare class Class {
     implements_: string[];
     constructor(name: string, title: string, isAbstract: boolean, members?: Member[], extends_?: string[], implements_?: string[]);
 }
+export declare class Actor {
+    name: string;
+    title: string;
+    type: string;
+    constructor(name: string, title: string, type: string);
+}
+export declare class Boundary {
+    name: string;
+    title: string;
+    type: string;
+    constructor(name: string, title: string, type: string);
+}
+export declare class Control {
+    name: string;
+    title: string;
+    type: string;
+    constructor(name: string, title: string, type: string);
+}
+export declare class Entity {
+    name: string;
+    title: string;
+    type: string;
+    constructor(name: string, title: string, type: string);
+}
+export declare class Database {
+    name: string;
+    title: string;
+    type: string;
+    constructor(name: string, title: string, type: string);
+}
+export declare class Collections {
+    name: string;
+    title: string;
+    type: string;
+    constructor(name: string, title: string, type: string);
+}
 export declare type GroupType = ('package' | 'node' | 'folder' | 'frame' | 'cloud' | 'database');
 export declare class Group {
     name: string;

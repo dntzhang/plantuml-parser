@@ -84,6 +84,12 @@ UMLElement
  / Group
  / Note
  / Class
+ / Actor
+ / Boundary
+ / Control
+ / Entity
+ / Database
+ / Collections
  / Interface
  / Enum
  / Component
@@ -237,6 +243,124 @@ Class
       implements_
     );
   }
+
+
+Actor
+  = _ isAbstract:"abstract "i? _ "actor " _ name:ElementName _ Decorators? _ extends_:Extends? _ implements_:Implements? _ "{" _ NewLine members:Member* _ "}" EndLine
+  {
+    return new types.Actor(
+      name.name,
+      name.title,
+      name.type
+    );
+  }
+  / _ isAbstract:"abstract "i? _ "actor " _ name:ElementName _ Decorators? _ extends_:Extends? _ implements_:Implements? _ EndLine
+  {
+    return new types.Actor(
+      name.name,
+      name.title,
+       name.type
+    );
+  }
+
+
+Boundary
+  = _ isAbstract:"abstract "i? _ "boundary " _ name:ElementName _ Decorators? _ extends_:Extends? _ implements_:Implements? _ "{" _ NewLine members:Member* _ "}" EndLine
+  {
+    return new types.Boundary(
+      name.name,
+      name.title,
+      name.type
+    );
+  }
+  / _ isAbstract:"abstract "i? _ "boundary " _ name:ElementName _ Decorators? _ extends_:Extends? _ implements_:Implements? _ EndLine
+  {
+    return new types.Boundary(
+      name.name,
+      name.title,
+       name.type
+    );
+  }
+
+
+
+Control
+  = _ isAbstract:"abstract "i? _ "control " _ name:ElementName _ Decorators? _ extends_:Extends? _ implements_:Implements? _ "{" _ NewLine members:Member* _ "}" EndLine
+  {
+    return new types.Control(
+      name.name,
+      name.title,
+      name.type
+    );
+  }
+  / _ isAbstract:"abstract "i? _ "control " _ name:ElementName _ Decorators? _ extends_:Extends? _ implements_:Implements? _ EndLine
+  {
+    return new types.Control(
+      name.name,
+      name.title,
+       name.type
+    );
+  }
+
+
+Entity
+  = _ isAbstract:"abstract "i? _ "entity " _ name:ElementName _ Decorators? _ extends_:Extends? _ implements_:Implements? _ "{" _ NewLine members:Member* _ "}" EndLine
+  {
+    return new types.Entity(
+      name.name,
+      name.title,
+      name.type
+    );
+  }
+  / _ isAbstract:"abstract "i? _ "entity " _ name:ElementName _ Decorators? _ extends_:Extends? _ implements_:Implements? _ EndLine
+  {
+    return new types.Entity(
+      name.name,
+      name.title,
+       name.type
+    );
+  }
+
+
+
+Database
+  = _ isAbstract:"abstract "i? _ "database " _ name:ElementName _ Decorators? _ extends_:Extends? _ implements_:Implements? _ "{" _ NewLine members:Member* _ "}" EndLine
+  {
+    return new types.Database(
+      name.name,
+      name.title,
+      name.type
+    );
+  }
+  / _ isAbstract:"abstract "i? _ "database " _ name:ElementName _ Decorators? _ extends_:Extends? _ implements_:Implements? _ EndLine
+  {
+    return new types.Database(
+      name.name,
+      name.title,
+       name.type
+    );
+  }
+
+
+
+Collections
+  = _ isAbstract:"abstract "i? _ "collections " _ name:ElementName _ Decorators? _ extends_:Extends? _ implements_:Implements? _ "{" _ NewLine members:Member* _ "}" EndLine
+  {
+    return new types.Collections(
+      name.name,
+      name.title,
+      name.type
+    );
+  }
+  / _ isAbstract:"abstract "i? _ "collections " _ name:ElementName _ Decorators? _ extends_:Extends? _ implements_:Implements? _ EndLine
+  {
+    return new types.Collections(
+      name.name,
+      name.title,
+       name.type
+    );
+  }
+
 
 Member
   = SeparatorLine
