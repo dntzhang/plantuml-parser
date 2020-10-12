@@ -124,7 +124,7 @@ export class Boundary {
     public title: string,
     public type: string,
   ) {
-    this.type = 'Boundary Object'
+    this.type = 'Boundary'
   }
 }
 
@@ -134,7 +134,7 @@ export class Control {
     public title: string,
     public type: string,
   ) {
-    this.type = 'Control Object'
+    this.type = 'Control'
   }
 }
 
@@ -144,7 +144,7 @@ export class Entity {
     public title: string,
     public type: string,
   ) {
-    this.type = 'Entity Object'
+    this.type = 'Entity'
   }
 }
 
