@@ -133,7 +133,7 @@ var Boundary = /** @class */ (function () {
         this.name = name;
         this.title = title;
         this.type = type;
-        this.type = 'Boundary';
+        this.type = 'Boundary Object';
     }
     return Boundary;
 }());
@@ -143,7 +143,7 @@ var Control = /** @class */ (function () {
         this.name = name;
         this.title = title;
         this.type = type;
-        this.type = 'Control';
+        this.type = 'Control Object';
     }
     return Control;
 }());
@@ -153,7 +153,7 @@ var Entity = /** @class */ (function () {
         this.name = name;
         this.title = title;
         this.type = type;
-        this.type = 'Entity';
+        this.type = 'Entity Object';
     }
     return Entity;
 }());
